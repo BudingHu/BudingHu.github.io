@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>轮盘</title>
+<style>
+	*{
+		margin:0;
+		padding:0;
+		list-style: none;
+	}
+	img{
+		display: block;
+	}
+	.pan{
+		width: 800px;
+		height: 400px;
+		border:1px solid red;
+		margin:100px auto 0;
+	}
+	.box{
+		width: 800px;
+		height: 400px;
+
+		transition:all 1s;
+
+		/* 设置3D属性 */
+		transform-style:preserve-3d;
+		position: relative;
+		transform:rotateX(-10deg) rotateY(0);
+	}
+
+	li{
+		position: absolute;
+		width:200px;
+		height:130px;
+		left:300px;
+		top:100px;
+	}
+	li:nth-child(1){
+		transform:rotateY(0) translateZ(274.8px);
+	}
+	li:nth-child(2){
+		transform:rotateY(40deg) translateZ(274.8px);
+	}
+	li:nth-child(3){
+		transform:rotateY(80deg) translateZ(274.8px);
+	}
+	li:nth-child(4){
+		transform:rotateY(120deg) translateZ(274.8px);
+	}
+	li:nth-child(5){
+		transform:rotateY(160deg) translateZ(274.8px);
+	}
+	li:nth-child(6){
+		transform:rotateY(200deg) translateZ(274.8px);
+	}
+	li:nth-child(7){
+		transform:rotateY(240deg) translateZ(274.8px);
+	}
+	li:nth-child(8){
+		transform:rotateY(280deg) translateZ(274.8px);
+	}
+	li:nth-child(9){
+		transform:rotateY(320deg) translateZ(274.8px);
+	}
+	.btn{
+		width: 1000px;
+		text-align: center;
+		margin:50px auto 0;
+		
+	}
+	.btn a{
+		display: inline-block;
+		color: #fff;
+		text-decoration: none;
+		width: 100px;
+		font:normal 14px/2em '微软雅黑';
+		background: lightcoral;
+	}
+</style>
+</head>
+<body>
+<div class="pan">
+	<div class="box">
+    	<ul>
+    		<li><img src="img/pan/1.png" alt=""></li>
+    		<li><img src="img/pan/2.png" alt=""></li>
+    		<li><img src="img/pan/3.png" alt=""></li>
+    		<li><img src="img/pan/4.png" alt=""></li>
+    		<li><img src="img/pan/5.png" alt=""></li>
+    		<li><img src="img/pan/6.png" alt=""></li>
+    		<li><img src="img/pan/7.png" alt=""></li>
+    		<li><img src="img/pan/8.png" alt=""></li>
+    		<li><img src="img/pan/9.png" alt=""></li>
+    	</ul>
+    </div>
+</div>
+
+<div class="btn">
+	<a href="javascript:;">左</a>
+	<a href="javascript:;">右</a>
+</div>
+<script src="jquery-1.7.2.min.js"></script>
+<script>
+	$(function(){
+		num = 0;
+		$('a').eq(0).click(function(){
+			num++;
+			$('.box').css({'transform':'rotateX(-10deg) rotateY('+ 40*num +'deg)'});
+		});
+
+		$('a').eq(1).click(function(){
+			num--;
+			$('.box').css({'transform':'rotateX(-10deg) rotateY('+ 40*num +'deg)'});
+		});
+	});
+</script>
+</body>
+</html>
