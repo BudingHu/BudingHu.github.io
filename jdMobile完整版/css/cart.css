@@ -1,0 +1,360 @@
+body{
+    background: #f5f5f5;
+}
+.jd_topBar{
+    position: static;
+}
+
+/*安全提示*/
+.jd_safeTip{
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    font-size: 13px;
+    text-align: center;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+.jd_safeTip p{
+    padding-left: 25px;
+    width: 240px;
+    display: inline-block;
+    position: relative;
+}
+.jd_safeTip p::before{
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+
+    background: url("../images/safe_icon.png") no-repeat;
+    background-size: 18px 18px;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+/*公用复选框*/
+.jd_check_box{
+    height: 20px;
+    width: 20px;
+    display: block;
+
+    background: url("../images/shop-icon.png") no-repeat;
+    background-size: 50px 100px;
+    background-position: 0 0;
+
+}
+.jd_check_box[checked]{
+    background-position: -25px 0;
+}
+
+/*店铺tit*/
+.jd_shop{
+    margin-top: 10px;
+    background: #fff;
+}
+.jd_shop .jd_shop_tit{
+    height:36px;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.jd_shop .jd_shop_tit .tit_check {
+    width: 40px;
+    height: 35px;
+    position: absolute;
+}
+
+.jd_shop .jd_shop_tit .tit_check .jd_check_box{
+    position: absolute;
+    top: 7px;
+    left: 10px;
+}
+
+.jd_shop .jd_shop_tit .tit_name{
+    padding-left: 40px;
+    font-size: 12px;
+}
+
+.jd_shop .jd_shop_tit .tit_name .imgLogo{
+    width: 15px;
+    height: 13px;
+    display: block;
+    float: left;
+    margin-top: 10px;
+}
+.jd_shop .jd_shop_tit .tit_name .name{
+    float: left;
+    font-size: 13px;
+    margin-top: 8px;
+    margin-left: 4px;
+}
+.jd_shop .jd_shop_tit .tit_name .tip{
+    float: right;
+    color: #d8505c;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+
+/*店铺*/
+.jd_shop .jd_shop_con{
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.jd_shop .jd_shop_con .con_check{
+    position: absolute;
+    width: 40px;
+    top: 0;
+    left: 0;
+}
+
+.jd_shop .jd_shop_con .con_check .jd_check_box{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+/*商品大盒子*/
+.jd_shop .jd_shop_con .con_product{
+    margin-top: 10px;
+    padding-left: 40px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+/*商品图片*/
+.jd_shop .jd_shop_con .con_product .con_product_img{
+    float:left;
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    display: block;
+    position: absolute;
+}
+.jd_shop .jd_shop_con .con_product .con_product_img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/*商品信息盒子*/
+.jd_shop .jd_shop_con .con_product .con_product_box{
+    padding-left: 90px;
+}
+/*名字*/
+.jd_shop .jd_shop_con .con_product .con_product_box .name{
+    height: 30px;
+    line-height: 15px;
+    font-size: 13px;
+    overflow: hidden;
+    display: block;
+}
+/*价格*/
+.jd_shop .jd_shop_con .con_product .con_product_box .price{
+    margin-top: 5px;
+}
+
+/*操作盒子*/
+.jd_shop .jd_shop_con .con_product .con_product_box .option{
+    width: 100%;
+    height: 24px;
+    margin-top: 5px;
+}
+
+/*改变数量盒子*/
+.jd_shop .jd_shop_con .con_product .con_product_box .option .change_box{
+    float: left;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option .change_box_left{
+    width: 32px;
+    height: 24px;
+    border: 1px solid #e0e0e0;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    display: block;
+    float: left;
+    text-align: center;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option input{
+    width: 32px;
+    height: 24px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    float: left;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option .change_box_right{
+    width: 32px;
+    height: 24px;
+    border: 1px solid #e0e0e0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    display: block;
+    float: left;
+    text-align: center;
+}
+/*删除盒子*/
+.jd_shop .jd_shop_con .con_product .con_product_box .option .delete_box{
+    float: right;
+}
+/*删除盒子上*/
+.jd_shop .jd_shop_con .con_product .con_product_box .option .delete_box .delete_box_top{
+    width: 20px;
+    height: 5px;
+    background: url("../images/delete_up.png") no-repeat;
+    background-size: 20px 5px;
+    margin-left: -1px;
+}
+/*删除盒子下*/
+.jd_shop .jd_shop_con .con_product .con_product_box .option .delete_box .delete_box_bot{
+    width: 18px;
+    height: 18px;
+    background: url("../images/delete_down.png") no-repeat;
+    background-size: 18px 18px;
+    margin-top: -3px;
+}
+
+/*金额操作*/
+.jd_amount{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height:62px;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+}
+/*金额操作的盒子*/
+.jd_amount .amount_check{
+    position: absolute;
+    width: 80px;
+    line-height: 62px;
+}
+.jd_amount .amount_check .jd_check_box{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+/*全选*/
+.jd_amount .amount_check span{
+    padding-left: 35px;
+    color: #fff;
+}
+/*金额信息*/
+.jd_amount .amount_info{
+    padding-left: 70px;
+    padding-right: 80px;
+    height: 62px;
+    color: #fff;
+}
+/*金额信息*/
+.jd_amount .amount_info .sum{
+    font-size: 16px;
+    margin-top: 15px;
+}
+/*金额信息*/
+.jd_amount .amount_info .other{
+    font-size: 10px;
+    margin-top: 5px;
+}
+/*结算按钮*/
+.jd_amount .amount_submit{
+    height: 62px;
+    width: 120px;
+    padding: 0 2px;
+    text-align: center;
+    line-height: 62px;
+    color: #fff;
+    background: #d8505c;
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/*结算按钮数量*/
+.jd_amount .amount_submit span{
+    font-size: 12px;
+}
+
+/*弹出层*/
+.jd_win{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1001;
+}
+
+.jd_win .jd_win_box{
+    width: 85%;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin: 0  auto;
+    padding:0 5%;
+    margin-top:40%;
+}
+.jd_win .jd_win_box .jd_win_box_text{
+    line-height: 75px;
+    color: #666;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+}
+.jd_win .jd_win_box .jd_btn_box{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.jd_win .jd_win_box .jd_btn_box .cancel{
+    width: 45%;
+    height:36px;
+    float: left;
+    margin-right: 10%;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    color: #888;
+    text-align: center;
+    line-height: 36px;
+}
+.jd_win .jd_win_box .jd_btn_box .submit{
+    width: 45%;
+    height:36px;
+    float: left;
+    background: #d8505c;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+}
+
+/*跳出来动画*/
+@-webkit-keyframes jumpOut{
+    0%{
+        opacity: 0;
+        transform: translateY(-2000px);
+        -webkit-transform: translateY(-2000px);
+    }
+    60%{
+        opacity: 1;
+        transform: translateY(30px);
+        -webkit-transform: translateY(30px);
+    }
+    75%{
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+    }
+    90%{
+        transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+        -webkit-transform: none;
+    }
+}
+.jumpOut{
+    animation:jumpOut 1s ease;
+}
