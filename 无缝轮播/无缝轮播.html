@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无缝轮播</title>
+<link href="" rel="stylesheet">
+<style>
+	*{
+		margin:0;
+		padding:0;
+		list-style: none;
+	}
+	img{
+		display: block;
+	}
+	#main {
+	    overflow: hidden;
+	    zoom: 1;
+	    position: relative;
+	}
+	#index_b_hero {
+	    width: 960px;
+	    height: 600px;
+	    margin: auto;
+	    position: relative;
+	}
+	#index_b_hero img {
+	    width: 960px;
+	    height: 600px;
+	}
+	#index_b_hero .heros {
+	    width: 960px;
+	    height: 600px;
+	}
+	#index_b_hero .hero-wrap {
+	    overflow: visible;
+	    position: absolute;
+	}
+	#index_b_hero .next, #index_b_hero .prev {
+	    filter: alpha(Opacity=70);
+	    opacity: .7;
+	    position: absolute;
+	    top: 50%;
+	    margin-top: -25px;
+	    margin-left: -50px;
+	    background-color: #303030;
+	    z-index: 9999;
+	    width:50px;
+	    height:110px;
+	}
+	#index_b_hero .next:hover, #index_b_hero .prev:hover {
+	    background-color: green;
+	}
+
+	#index_b_hero .prev {
+	    margin: -25px -50px 0 0;
+	    right: 0;
+	}
+
+	#index_b_hero .mask-left, #index_b_hero .mask-right, .hero {
+	    background: #fff;
+	    z-index: 1;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 960px;
+	    height: 600px;
+	    overflow: hidden;
+	    left: 0px;
+	}
+	#index_b_hero .mask-right, #index_b_hero .mask-left {
+	    z-index: 4;
+	    left: -960px;
+	    filter: alpha(Opacity=50);
+	    opacity: .5;
+	    background: #fff;
+	    overflow: hidden;
+	}
+	#index_b_hero .mask-right {
+	    left: 960px;
+	}
+	#index_b_hero .active {
+	    z-index: 2;
+	    left: 0;
+	}
+</style>
+
+<script src="jquery-1.7.2.min.js"></script>
+<script src="index.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="index_b_hero">
+            <div class="hero-wrap">
+                <ul class="heros cf" id="ulBox">
+                    <li class="hero">
+	                    <a href="" target="_black">
+	                    	<img src="img/001.jpg" alt="马来西亚游记">
+	                    </a>
+                    </li>
+                    
+                    <li class="hero">
+	                    <a href="" target="_black">
+	                    <img src="img/002.jpg" alt="马来西亚游记">
+	                    </a>
+                    </li>
+                    <li class="hero">
+	                    <a href="" target="_black">
+	                    	<img src="img/003.jpg" alt="马来西亚游记">
+	                    </a>
+                    </li>
+                    <li class="hero">
+	                    <a href="" target="_black">
+	                    	<img src="img/004.jpg" alt="马来西亚游记">
+	                    </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="helper">
+                <div class="mask-left"></div>
+                <div class="mask-right"></div>
+                <p class="prev"></p>
+                <p class="next"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
