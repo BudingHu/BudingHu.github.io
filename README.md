@@ -1,2 +1,2 @@
 # BudingHu.github.io
-布丁·胡小倩技术博客
+布丁·胡小倩
