@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原生js中的排他思想</title>
+	<style>
+		button{
+			background: #ccc;
+			outline: none;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var aBtns = document.getElementsByTagName('button')
+			for(var i = 0;i<aBtns.length;i++){
+				aBtns[i].onclick = function(){
+					//排他思想是先排别人，在控制自己;
+					for(var i = 0;i<aBtns.length;i++){
+						aBtns[i].style.background = '#ccc';
+					}
+					this.style.background = 'yellow';
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<button>按钮1</button>
+	<button>按钮2</button>
+	<button>按钮3</button>
+	<button>按钮4</button>
+</body>
+</html>
