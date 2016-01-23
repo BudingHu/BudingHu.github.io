@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>音频播放器</title>
+</head>
+<body>
+	<div style="height:100px;width:100%;background-color:#666;">
+		<marquee behavior="" direction="right" style="height:60px;line-height:60px;color:#f40;">音乐.mp3</marquee>
+		<span id="curtimespan" style="color:#fff;display:block;width:100%;text-align:right;"></span>
+	</div>
+	<div style="height:5px;background-color:#e7e7e7;width:100%;">
+		<div style="width:0px;height:4px;background-color:#000;" id="curdiv"></div>
+	</div>
+	<audio src="yinyue.mp3" id="curaodios">该浏览器不支持</audio>
+	<input type="button" onclick = "play()" value = "播放">
+	<input type="button" onclick = "pause()" value = "暂停">
+	<input type="button" onclick = "jia()" value = "增加音量">
+	<input type="button" onclick = "jian()" value = "减小音量">
+	<input type="button" onclick = "plays()" value = "播放制定">
+
+	<script>
+		var curaudio = document.getElementById('curaodios');
+		for(a in curaudio){
+			console.log(a);
+		}
+		function settime(){
+			var curtimer = setInterval("getcurtime()",100);
+
+		}
+		function play(){
+			curaudio.play();
+			settime();
+		}
+		function pause(){
+			curaudio.pause();
+		}
+		function getcurtime(){
+			var playtime = parseInt(curaudio.currentTime/60)+":"+parseInt(curaudio.currentTime%60);
+			var alltime = parseInt(curaudio.duration/60)+":"+parseInt(curaudio.duration%60);
+
+			var pers = 100*(curaudio.currentTime)/(curaudio.duration);
+			document.getElementById("curtimespan").innerHTML =alltime+"/"+ playtime+"&nbsp;";
+			document.getElementById('curdiv').style.width = pers+"%";
+		}
+		function jia(){
+			if(curaudio.volume<1){
+				curaudio.volume = curaudio.volume+0.1;
+			}
+		}
+		function jian(){
+			if(curaudio.volume>0){
+				curaudio.volume = curaudio.volume-0.1;
+			}
+		}
+		function plays(){
+			curaudio.src = "1.mp3";
+			curaudio.play();
+			settime();
+		}
+	</script>
+</body>
+</html>
