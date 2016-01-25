@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+	#input_area{ width:500px; height:50px; margin:50px auto; background:#F60; text-align:center; line-height:50px;}
+	img{ width:600px; margin:0 auto; display:block;}
+	#show{ width:600px; margin:0 auto;}
+</style>
+</head>
+
+<body>
+<div id="input_area">
+	请输入你的星座<input type="text" id="content"/><button id="btn">确定</button>
+</div>
+<img src="images/title.jpg"/>
+<img id="show"/>
+</body>
+</html>
+<script>
+	var content = document.getElementById('content');
+	var enter = document.getElementById('btn');
+	var show = document.getElementById('show');
+	enter.onclick = function(){ 
+		if( content.value=='天枰座'){ 
+			show.src = 'images/tianping.jpg';
+		}else if( content.value=='射手座'){ 
+			show.src = 'images/sheshou.jpg';
+		}else if( content.value=='白羊座'){ 
+			show.src = 'images/baiyang.jpg';
+		}else if( content.value=='双鱼座'){ 
+			show.src = 'images/shuangyu.jpg';
+		}else if( content.value=='摩羯座'){ 
+			show.src = 'images/mojie.jpg';
+		}else if( content.value=='金牛座'){ 
+			show.src = 'images/jinniu.jpg';
+		}else if( content.value=='水瓶座'){ 
+			show.src = 'images/shuiping.jpg';
+		}else if( content.value=='天蝎座'){ 
+			show.src = 'images/tianxie.jpg';
+		}else if( content.value=='巨蟹座'){ 
+			show.src = 'images/juxie.jpg';
+		}else if( content.value=='狮子座'){ 
+			show.src = 'images/shizi.jpg';
+		}else if( content.value=='双子座'){ 
+			show.src = 'images/shuangzi.jpg';
+		}else if( content.value=='处女座'){ 
+			show.src = 'images/chunv.jpg';
+		}else if( content.value==''){ 
+			alert('请输入内容再判断')
+		}else { 
+			alert('没有这个星座！')
+		}
+	}
+</script>
