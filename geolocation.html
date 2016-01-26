@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>地理位置</title>
+</head>
+<body>
+	<button onclick = "getPosition()">获取地理位置</button>
+
+	<script>
+		var obj = navigator.geolocation;
+		//有三种方法是：
+			//getCurrentPosition 获取当前地理位置  
+			//watchPosition 每过一段时间重新获取地理位置
+			//clearWatch 清空
+		for(a in obj){
+		console.log(a);
+		}
+
+		function getPosition(){
+			if( navigator.geolocation){
+				navigator.geolocation.getCurrentPosition(successful,filed);
+			}
+		}
+		function successful(p){ //暂时称为p
+			alert(p.coords.longitude+"\\"+p.coords.latitude);//根据p获取当前位置的经纬度
+		}
+		function filed(error){
+			alert(error.message);
+		}
+	</script>
+</body>
+</html>
