@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<title>rem</title>
+	<script>
+		//动态设置像素比，默认值是1
+		var iScale = 1;
+
+		//window.devicePixelRatio是当前屏幕像素比
+		iScale = iScale/window.devicePixelRatio;
+
+		//将这个值写在meta标签里
+		document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale='+iScale+', maximum-scale=1.0, minimum-scale='+iScale+'">');
+
+		//动态设置rem基准值，用当前设备的宽度/16得到一个数值，将得到的数值设置为html的字体大小
+		window.onload = function(){
+			var oHtml = document.getElementsByTagName('html')[0]
+			var iWidth = document.documentElement.clientWidth;
+
+			oHtml.style.fontSize = iWidth/16 +'px';
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>
