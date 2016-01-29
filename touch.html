@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动端触摸事件</title>
+	<style>
+		.curdiv{
+			width: 100%;
+			height: 300px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="curdiv" id="divid"></div>
+	<script>
+		var curdivs = document.getElementById('divid');
+		curdivs.addEventListener("touchstart",function(){
+			//alert('触摸事件')
+		},false);
+		curdivs.addEventListener("touchmove", function(){
+			alert('触摸事件移动')
+		},false);
+		curdivs.addEventListener("touchend", function(){
+			//alert('触摸事件结束')
+		}, false);
+	</script>
+</body>
+</html>
