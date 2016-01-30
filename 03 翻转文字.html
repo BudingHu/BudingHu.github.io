@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	body{ padding: 200px;}
+	span{ margin: 50px; font:500 120px '微软雅黑'; color: #336699; position: relative;}
+	span:after,span:before{ content: attr(data-zi); position: absolute; left: 0; top: 0; transform-origin:left center; transition: all 0.5s;}/*拿出灰色和白色的文字*/
+	span:after{ color: #fcfcfc; transform:rotateX(0) rotateY(15deg) rotateZ(0);}
+	span:before{color: rgba(0,0,0,0.3); transform:scale(1.05,1);}
+	span:hover:after{ transform:rotateX(0) rotateY(40deg) rotateZ(0);}
+	span:hover:before{  transform:scale(1.05,1) rotateX(0) rotateY(30deg) rotateZ(0) skew(0,8deg);}
+	</style>
+</head>
+<body>
+	<span data-zi="翻">翻</span>
+	<span data-zi="转">转</span>
+	<span data-zi="文">文</span>
+	<span data-zi="字">字</span>
+</body>
+</html>
