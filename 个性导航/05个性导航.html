@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style>
+	*{padding: 0;margin: 0;list-style: none;font-size:30px;font-weight: bold;}
+	ol{position: fixed; top: 0;left: 100px;}
+	ol li{width:100px; height: 100px; background: #ccc;border: 1px solid #000; line-height:100px;text-align: center;cursor: pointer;}
+	ol .current{background: yellow;}
+	html,body{height: 100%;}
+	ul{height:100%;}
+	ul li{width: 100%;height: 100%;  background: pink;}
+	</style>
+	<script src="jquery-1.7.2.min.js"></script>
+	<script>
+	$(function() {
+		//1. 设置各个ul下li的背景，方式采用加工函数
+		//2. 事件，当点击的时候，让当前按钮变颜色；
+		//3.  在点击的同时，让当前的窗口坐标值相应的发生变化
+		// 坐标值  0         0
+		//              1     100%     100% （可以计算一屏幕的高度）
+		//              2     100%      200%
+		var speed=500;
+		var oneHeight=$(window).height();
+		var colors=['pink','purple','skyblue','green','orange'];  //  colors[2]
+		$(' ul li').each(function(index, el) {
+			$(el).css('background',colors[index]);
+		});
+
+
+		$('ol li').click(function(event) {
+			$(this).addClass('current').siblings('li').removeClass('current');
+			//给滚动坐标值
+			var num=$(this).index();
+			$('html,body').stop().animate({scrollTop:num*oneHeight}, speed)
+		});
+	});
+	</script>
+</head>
+<body>
+	<ul>
+		<li>首页</li>
+		<li>关注</li>
+		<li>动态</li>
+		<li>风格</li>
+		<li>作品</li>
+	</ul>
+	<ol>
+		<li class="current">首页</li>
+		<li>关注</li>
+		<li>动态</li>
+		<li>风格</li>
+		<li>作品</li>
+	</ol>
+</body>
+</html>
