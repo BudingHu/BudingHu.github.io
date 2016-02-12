@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Mobile</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="index">
+		<div data-role="header" >
+			<h1>主页1</h1>
+		</div>
+		<div data-role="content">
+			<p>中间内容部分1</p>
+			<!-- data-transition的属性值： 
+				slid:默认值，从右到左的动画滑动效果
+				slideup:向上的滑动效果
+				slidedown：向下的滑动效果
+				fade：渐变褪色的动画效果
+				pop：以弹出的效果打开页面
+				flip：旧页飞出，新页飞入的效果
+				none：无效果
+		-->
+			<p><a href="#index2" data-transition="non就                “考虑Z·e">跳转页面二</a></p>
+		</div>
+		<div data-role="footer">
+			<h1>页面底部1</h1>
+		</div>
+	</div>
+	<div data-role="page" id="index2">
+		<div data-role="header" >
+			<h1>主页2</h1>
+		</div>
+		<div data-role="content">
+			<p>中间内容部分2</p>
+			<p><a href="#index"  data-transition="none">跳转到页面一</a></p>
+		</div>
+		<div data-role="footer">
+			<h1>页面底部2</h1>
+		</div>
+	</div>
+</body>
+</html>
+<!-- 在jqM中可以在单一的HTML页面中创建多个页面，需通过唯一的id来分隔每张页面，并使用href链接 -->
