@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>将页面用作对话框</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="pageone">
+		<div data-role="header">
+			<h1>主页</h1>
+		</div>
+		<div data-role="content">
+			<p>中间内容部分</p>
+			<a href="#pagetwo" data-rel="dialog">点击跳转到页面二</a>
+		</div>
+		<div data-role="footer">
+			<h1>底部</h1>
+		</div>
+	</div>
+
+	<div data-role="page" id="pagetwo">
+		<div data-role="header">
+			<h1>现在是一个对话框</h1>
+		</div>
+		<div data-role="content">
+			<p>中间内容部分</p>
+			<a href="#pageone">点击跳转到页面一</a>
+		</div>
+		<div data-role="footer">
+			<h1>底部</h1>
+		</div>
+	</div>
+</body>
+</html>
