@@ -9,9 +9,102 @@
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
+	<!-- jqM创建列表，向ol或者ul添加data-role="listview,如果要为列表添加圆角和外边距，使用data-role="true"，默认的，列表中的列表项会自动转换成按钮，无需添加data-role="button"
 	<div data-role="page">
 		<div data-role="header">
 			<h1>主页</h1>
+		</div>
+		<div data-role="cocntent">
+			<h1>有序列表</h1>
+			<ol data-role="listview">
+				<li><a href="#">有序列表</a></li>
+				<li><a href="#">有序列表</a></li>
+				<li><a href="#">有序列表</a></li>
+			</ol>
+			<h2>无序列表</h2>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#">无序列表</a></li>
+				<li><a href="#">无序列表</a></li>
+				<li><a href="#">无序列表</a></li>
+			</ul>
+		</div>
+	</div> -->
+
+
+
+	<!-- 列表分隔符
+	如果需要列表分隔符，向li添加data-role="list-devider属性"
+	<div data-role="page">
+		<div data-role="header">
+			<h1>主页</h1>
+		</div>
+		<div data-role="cocntent">
+			<h2>列表分隔符</h2>
+			<ul data-role="listview" data-inset="true">
+				<li data-role="list-devider">中国</li>
+				<li><a href="#">北京</a></li>
+				<li><a href="#">黑龙江</a></li>
+			</ul>
+		</div>
+	</div> -->
+
+
+	<!-- 如果列表是字母顺序的（比如通讯录），
+	通过在<ol>或<ul>元素上设置data-autodividers="true" 属性：
+	<div data-role="page">
+		<div data-role="header">
+			<h1>主页</h1>
+		</div>
+		<div data-role="cocntent">
+			<h2>列表分隔符data-autodividers="true"</h2>
+			<ul data-role="listview" data-autodividers="true" data-inset="true">
+			    <li><a href="#">Adele</a></li>
+			    <li><a href="#">Agnes</a></li>
+			    <li><a href="#">Albert</a></li>
+			    <li><a href="#">Billy</a></li>
+			    <li><a href="#">Bob</a></li>
+			    <li><a href="#">Calvin</a></li>
+			    <li><a href="#">Cameron</a></li>
+			    <li><a href="#">Chloe</a></li>
+			    <li><a href="#">Christina</a></li>
+			    <li><a href="#">Diana</a></li>
+			    <li><a href="#">Gabriel</a></li>
+			    <li><a href="#">Glen</a></li>
+			    <li><a href="#">Ralph</a></li>
+			    <li><a href="#">Valarie</a></li>
+			</ul>
+		</div>
+	</div> -->
+
+
+
+	<!-- 搜索过滤器 -->
+	<!-- 如果需要在列表中添加搜索框，在ul或者ol中使用data-filter="true" -->
+	<div data-role="page">
+		<div data-role="header">
+			<h1>主页</h1>
+		</div>
+		<div data-role="cocntent">
+			<h2>搜索过滤器data-filter="true</h2>
+			<ul data-role="listview" data-autodividers="true" data-inset="true" data-filter="true" data-filter-placeholder="搜索姓名">
+				<!-- 默认的搜索框中的文本是Filter items...
+					如果要修改默认文本，需要添加data-filter-placeholder属性
+				 -->
+			    <li><a href="#">Adele</a></li>
+			    <li><a href="#">Agnes</a></li>
+			    <li><a href="#">Albert</a></li>
+			    <li><a href="#">Billy</a></li>
+			    <li><a href="#">Bob</a></li>
+			    <li><a href="#">Calvin</a></li>
+			    <li><a href="#">Cameron</a></li>
+			    <li><a href="#">Chloe</a></li>
+			    <li><a href="#">Christina</a></li>
+			    <li><a href="#">Diana</a></li>
+			    <li><a href="#">Gabriel</a></li>
+			    <li><a href="#">Glen</a></li>
+			    <li><a href="#">Ralph</a></li>
+			    <li><a href="#">Valarie</a></li>
+			</ul>
 		</div>
 	</div>
 </body>
