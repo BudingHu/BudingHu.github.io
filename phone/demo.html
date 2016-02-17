@@ -9,7 +9,7 @@
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-	<div data-role="page">
+	<div data-role="page" id="one">
 		<!-- div data-role="header">
 			<a href="#">首页</a>
 			<h1>案例</h1>
@@ -54,12 +54,14 @@
 		</div> -->
 
 
-		<div data-role="header" class="ui-btn" style="margin:0">
-			<ul data-role="controlgroup" data-type="horizontal">
-				<li><a href="#" data-role="button" class="ui-btn-active ui-state-persist">所有通话</a></li>
-				<li><a href="#one" data-role="button">未接来电</a></li>				
-			</ul>
-			<a href="#" class="ui-btn-right" style="vertical:middle">编辑</a>
+		<!-- <div data-role="header"  style="margin:0">
+			<div data-role="navbar"class="ui-btn">
+				<div data-role="controlgroup" data-type="horizontal">
+					<a href="#" class="ui-btn-active ui-state-persist">所有通话</a>
+					<a href="#two" data-transition="none">未接来电</a>
+				</div>
+				<a href="#" class="ui-btn-right" >编辑</a>
+			</div>
 		</div>
 
 			<div data-role="content">
@@ -78,21 +80,64 @@
 	</div>
 
 
-	<div data-role="page" id="one">
+	<div data-role="page" id="two">
 		<div data-role="header" class="ui-btn" style="margin:0">
-			<!-- <div data-role="controlgroup" data-type="horizontal">
-				<a href="#" data-role="button" class="ui-btn-active ui-state-persist">所有通话</a>
-				<a href="#one" data-role="button">未接来电</a>
-			</div> -->
-			<ul data-role="controlgroup" data-type="horizontal">
-				<li><a href="#" data-role="button" >所有通话</a></li>
-				<li><a href="#one" data-role="button" class="ui-btn-active ui-state-persist">未接来电</a></li>				
-			</ul>
+			<div data-role="navbar">
+				<div data-role="controlgroup" data-type="horizontal">
+					<a href="#one" data-transition="none">所有通话</a>
+					<a href="#" class="ui-btn-active ui-state-persist" >未接来电</a>
+				</div>
+			</div>
 			<a href="#" class="ui-btn-right" style="vertical:middle">编辑</a>
 		</div>
 			<div data-role="content"  class="ui-btn-active ui-state-persist">
 			<p>222</p>
-			</div>
+			</div> -->
+
+
+		<div data-role="header">
+			<h1>表单</h1>
+		</div>
+		<div data-role="content">
+			<form method="post">
+				<div data-role="fieldcontain">
+					<label for="name">全名：</label>
+					<input type="text" placeholder="请搜索姓名">
+
+					<label for="search">您要搜索什么？</label>
+					<input type="search" placeholder="需要搜索的内容">
+
+					<label for="date">日期：</label>
+					<input type="date">
+
+					<label for="color">选择颜色：</label>
+					<select>
+						<option value="red">红色</option>
+						<option value="yellow">黄色</option>
+						<option value="black">黑色</option>
+						<option value="pink">粉色</option>
+						<option value="green">绿色</option>
+					</select>
+
+					<label for="switch">切换开关：</label>
+					<select data-role="slider">
+						<option value="on">on</option>
+						<option value="off">off</option>
+					</select>
+					<br><br>
+
+					<div data-role="controlgroup">
+						<legend>选择电影：</legend>
+						<label for="mov1">电影一</label>
+						<input type="checkbox"  id="mov1">
+						<label for="mov2">电影二</label>
+						<input type="checkbox"  id="mov2">
+						<label for="mov3">电影三</label>
+						<input type="checkbox"  id="mov3">
+					</div>
+				</div>
+			</form>
+		</div>
 		<div data-role="footer" data-position="fixed" data-fullscrieen="true">
 			<div data-role="navbar">
 				<ul>
