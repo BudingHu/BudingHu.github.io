@@ -1,0 +1,35 @@
+*{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+.box{
+	width: 600px;
+	margin:100px auto 0;
+}
+li{
+	float: left;
+	width: 200px;
+	text-align: center;
+	font: 16px/40px "宋体";
+	position: relative;
+}
+.box li h2{
+	background:#ccc;
+	font: 16px/40px "宋体";
+}
+li li{
+	background-color: pink;
+	margin-top: 1px;
+	color: #fff;
+}
+li li:hover{
+	background-color: #f60;
+}
+
+ul ul{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 40px;
+}
